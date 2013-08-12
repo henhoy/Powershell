@@ -93,7 +93,7 @@ function do-connectionstring{
 
 ### MAIN ###
 Write-Host "        "
-Write-Host "DEBUG: Starting new scan ..."
+Write-Host "DEBUG: Starting new scan at $(get-date) ..."
 
 $serviceAccPassWord = "gtR4#edCVbn"
 $serviceAccName = "a904025"
@@ -102,10 +102,10 @@ $serviceSubDomain = "EMEA"
 $pw = convertto-securestring -AsPlainText -Force -String $serviceAccPassWord
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist "$serviceSubDomain\$serviceAccName", $pw
 
-$scanresult="instancescan-result_20130812.txt"
+$scanresult="Query_Instance_Result-$(get-date -f yyyyMMdd-hhmm).txt"
 "" | Out-File $scanresult
 
-get-content hostname_test.txt | Foreach-Object {
+get-content hostname_full.txt | Foreach-Object {
   
   $Hostname=$_
   write-host "DEBUG: Hostname: $Hostname"
@@ -128,7 +128,7 @@ get-content hostname_test.txt | Foreach-Object {
 
     #$content = "set nocount off; select name from sysdatabases"
 	
-	$content = "declare @object_name nvarchar(128); set @object_name = 'msdb.dbo.user_access_log'; if object_id(@object_name) begin select * from msdb.dbo.user_access_log; end"
+	$content = "declare @object_name nvarchar(128); set @object_name = 'msdb.dbo.user_access_log'; if object_id(@object_name) is not null begin select * from msdb.dbo.user_access_log; end"
 	
     #$connectionstring
   
