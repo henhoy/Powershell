@@ -1,0 +1,14 @@
+	  <PERFCOUNTER Object="PROCESSOR" Counter="% PROCESSOR TIME" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="MEMORY" Counter="AVAILABLE KBYTES" Instance="" />
+	  <PERFCOUNTER Object="MEMORY" Counter="PAGES/SEC" Instance="" />
+	  <PERFCOUNTER Object="SYSTEM" Counter="PROCESSOR QUEUE LENGTH" Instance="" />
+	  <PERFCOUNTER Object="SYSTEM" Counter="CONTEXT SWITCHES/SEC" Instance="" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="AVG. DISK QUEUE LENGTH" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="AVG. DISK SEC/TRANSFER" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="AVG. DISK SEC/WRITE" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="AVG. DISK SEC/READ" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="DISK TRANSFERS/SEC" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="DISK READS/SEC" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="DISK WRITES/SEC" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="DISK READ BYTES/SEC" Instance="_TOTAL" />
+	  <PERFCOUNTER Object="LOGICALDISK" Counter="DISK WRITE BYTES/SEC" Instance="_TOTAL" />
